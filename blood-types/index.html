@@ -255,6 +255,25 @@ body.t-mature .btn[style*="var(--good)"]{background:color-mix(in srgb,var(--k-ex
 body.t-mature .btn[style*="var(--m-cards)"]{background:color-mix(in srgb,var(--k-rule) 22%,var(--card)) !important;border:none}
 body.t-mature nav button.on{background:var(--ink);color:var(--bg)}
 </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style id="dyslexia-friendly">
+:root{ --fs:clamp(19px, 17px + .45vw, 22px); }
+body.adhd{ --fs:clamp(20px, 18px + .45vw, 23px); }
+/* Latin (A/B/O/Rh, numbers) -> Atkinson Hyperlegible: distinct b/d/p/q, clear shapes.
+   Hebrew has no glyph in Atkinson, so it falls back to Assistant automatically. */
+body, .btn, .opt, input.fill, textarea, .kind, .mission, .stat, nav button,
+.face, .feedback, b, strong, h1, h2, h3,
+.chunk h2, .box .lbl, .bubble{
+  font-family:"Atkinson Hyperlegible","Assistant","Segoe UI",Arial,sans-serif !important;
+}
+body{ line-height:1.9 !important; letter-spacing:.012em; word-spacing:.06em; }
+h1, h2, h3, .chunk h2, .face{ line-height:1.45 !important; letter-spacing:0; }
+.chunk b{ letter-spacing:0; }
+/* calmer reading surface: soft cream instead of stark white */
+:root{ --card:#fdfbf7; }
+@media (prefers-color-scheme: dark){ :root{ --card:#272436; } }
+</style>
 </head>
 <body>
 <header>
